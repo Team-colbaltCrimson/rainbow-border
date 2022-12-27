@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+margin: 0;
+padding: 0;
+height: 100vh;
+width: 100vh;
+display: grid;
+place-items: center;
+background: #fff;
+}
+div{
+--angle: 0deg;
+width: 50vmin;
+height: 10vmin;
+border: 3vmin solid;
+border-radius: 7px;
+background: linear-gradient(#42455a,#4255a);
+border-image: conic-gradient(from var(--angle), red, orange, yellow, lime, green, lightblue, blue, indigo, pink, purple, red) 1;
+font-size: 3.14em;
+animation: 2.5s rotate linear infinite;
+}
+@keyframes rotate {
+to{
+--angle: 360deg;
+}
+}
+@property --angle {
+syntax: '<angle>';
+initial-value: 0deg;
+inherits: false;
+}
+</style>
+</head>
+<body>
+<div class="rainbowoutline">
+12.345QD per sec
+</div>
+</body>
+</html>
